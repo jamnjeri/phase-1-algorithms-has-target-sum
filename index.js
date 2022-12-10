@@ -1,5 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (element of array){
+    for (let index= 0; index <= array.length-1; index++){
+      let total = 0;
+      let value = array.indexOf(element)+index+1;
+      let nextNumber =array[value];
+      total= element + nextNumber;
+      if (total === target){
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
